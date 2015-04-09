@@ -1,4 +1,15 @@
 extends layout
 
+block head-scripts
+	link(rel='stylesheet' href='/style_sheets/landing.css')
+
 block content
-	h1 Hello Boulder!
+	.jumbotron
+		img.main-logo(src='/imgs/ww-logo-web-small.png')
+	.container
+		.row
+			.col-md-offset-2.col-sm-offset-2.col-md-8.col-sm-8.middle
+				button#geo-setter.btn SET CURRENT LOCATION
+
+block body-scripts
+	script(src='/scripts/landing.js')

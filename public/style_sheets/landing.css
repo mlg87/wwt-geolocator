@@ -1,0 +1,45 @@
+/*
+
+Mint: #a0d39f
+Gray: #535353
+Blue: #55789a
+Salmon: #f27167
+
+*/
+
+body {
+	color: #535353;
+	font-family: futura;
+}
+
+.middle {
+	text-align: center;
+}
+
+.main-logo {
+	margin: auto;
+	display: block;
+	width: 400px;
+}
+
+
+/* OVERWRITING BOOTSTRAP DEFAULTS */
+
+.jumbotron {
+	background-color: #a0d39f;
+	border-bottom: 5px solid #535353;
+}
+
+.btn {
+	padding: 30px 80px;
+	color: #a0d39f;
+	font-size: 2em;
+	border: 2px solid #a0d39f;
+	border-radius: 2px;
+	background-color: #fff;
+}
+
+.btn:hover {
+	color: #fff;
+	background-color: #a0d39f;
+}
