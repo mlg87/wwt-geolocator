@@ -14,6 +14,13 @@ $(document).ready(function() {
 		};
 		var success = function(pos) {
 			var coord = pos.coords;
+			console.log('success coords: ', coord);
+
+			// coord takes the place of data
+			$.post('/current-truck-location', coord, function(data) {
+				console.log('COORD IN THE POST: ', coord);
+			}).done(console.log('COORD ON THE .DONE: ', coord));
+
 			results.lat = coord.latitude;
 			results.lng = coord.longitude;
 			results.acc = coord.accuracy;
@@ -23,7 +30,7 @@ $(document).ready(function() {
 		};
 		
 		navigator.geolocation.getCurrentPosition(success, err, results);
-		console.log('results : ', results);
+		console.log('results: ', results);
 		
 	});
 
