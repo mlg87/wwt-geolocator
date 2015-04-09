@@ -1,0 +1,22 @@
+{
+	"name": "WWT-GeoLocator",
+	"version": "0.0.1",
+	"scripts": "node app.js",
+	"dependencies": {
+		"express": "^4",
+		"jade": "^1",
+		"body-parser": "^1"
+	},
+	"description": "Auto updates our 'Find the Whale' page on our website with the truck's current location.",
+	"main": "app.js",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/mlg87/wwt-geolocator.git"
+	},
+	"author": "Mason Goetz",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/mlg87/wwt-geolocator/issues"
+		},
+	"homepage": "https://github.com/mlg87/wwt-geolocator"
+}
