@@ -9,10 +9,16 @@ var truckLocationSchema = mongoose.Schema({
 		type: Date,
 		default: Date.now
 	},
-	latitude: Number,
-	longitude: Number
+	latitude: {
+		required: true, 
+		type: Number
+	},
+	longitude: {
+		required: true,
+		type: Number
+	}
 });
 
 var TruckLocation = mongoose.model('TruckLocation', truckLocationSchema);
 
-model.exports = TruckLocation;
+module.exports = TruckLocation;

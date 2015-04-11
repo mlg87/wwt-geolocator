@@ -1,22 +1,27 @@
 {
-	"name": "WWT-GeoLocator",
-	"version": "0.0.1",
-	"scripts": "node app.js",
-	"dependencies": {
-		"express": "^4",
-		"jade": "^1",
-		"body-parser": "^1"
-	},
-	"description": "Auto updates our 'Find the Whale' page on our website with the truck's current location.",
-	"main": "app.js",
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/mlg87/wwt-geolocator.git"
-	},
-	"author": "Mason Goetz",
-	"license": "ISC",
-	"bugs": {
-		"url": "https://github.com/mlg87/wwt-geolocator/issues"
-		},
-	"homepage": "https://github.com/mlg87/wwt-geolocator"
+  "name": "wwt-geolocator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mlg87/wwt-geolocator.git"
+  },
+  "author": "Mason Goetz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mlg87/wwt-geolocator/issues"
+  },
+  "homepage": "https://github.com/mlg87/wwt-geolocator",
+  "dependencies": {
+    "body-parser": "^1.12.2",
+    "express": "^4.12.3",
+    "fs": "0.0.2",
+    "jade": "^1.9.2",
+    "mongoose": "^4.0.1",
+    "path": "^0.11.14"
+  }
 }
