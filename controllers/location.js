@@ -20,6 +20,7 @@ var locationController = {
 		});
 	},
 	reportLocation: function(req, res, next) {
+		res.header("Access-Control-Allow-Origin", "*");
 		console.log('REQUESTED TRUCK LOCATION');
 	}
 };
