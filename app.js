@@ -23,6 +23,7 @@ app.get('/thank-you', indexController.thankYou);
 app.post('/current-truck-location', locationController.findTruck);
 app.get('/current-truck-location', locationController.reportLocation);
 
-var server = app.listen(6189, function() {
+var port = process.env.PORT || 6189;
+var server = app.listen(port, function() {
 	console.log('Express server listening on port ' + server.address().port);
 });
