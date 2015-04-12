@@ -11,9 +11,11 @@ var mongoose = require('mongoose');
 mongoose.connect(process.env.MONGOLAB_URI || 'mongodb://localhost/wwtTruckLocations');
 
 var app = express();
+app.use(allowCrossDomain);
 app.set('view engine', 'jade');
 app.set('views', __dirname + '/views');
-app.use(allowCrossDomain);
+
+
 app.use(express.static(__dirname + '/public'));
 app.use(bodyParser.urlencoded({extended: false}));
 
