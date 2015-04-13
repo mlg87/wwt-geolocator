@@ -11,10 +11,18 @@ var mongoose = require('mongoose');
 mongoose.connect(process.env.MONGOLAB_URI || 'mongodb://localhost/wwtTruckLocations');
 
 var app = express();
-app.use(allowCrossDomain);
 app.set('view engine', 'jade');
 app.set('views', __dirname + '/views');
 
+
+// stackoverflow suggestion for cross-domain
+app.all('/', function(req, res, next) {
+	res.header("Access-Control-Allow-Origin", "*");
+	res.header("Access-Control-Allow-Headers", "X-Requested-With");
+	next();
+});
+
+// app.use(allowCrossDomain);
 
 app.use(express.static(__dirname + '/public'));
 app.use(bodyParser.urlencoded({extended: false}));

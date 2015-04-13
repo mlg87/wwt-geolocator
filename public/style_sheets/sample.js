@@ -1,11 +1,9 @@
 $(function(){
 	$.ajaxSetup({
-		headers: { "header": "Access-Control-Allow-Origin"}
+		headers: { "Access-Control-Allow-Origin": "*"}
 	});
-	$.ajax({
-		url: 'http://wwt-trucklocator.herokuapp.com/current-truck-location',
-		function(req, res) {
-			console.log('res: ', res);
-		}
+	$.get("//wwt-trucklocator.herokuapp.com/current-truck-location", function (req, res) {
+		console.log("res: ", res);
 	});
 });
+
