@@ -21,8 +21,8 @@ var locationController = {
 	},
 	reportLocation: function(req, res, next) {
 		// res.header("Access-Control-Allow-Origin", "*");
-		res.header("Access-Control-Allow-Origin", "*");
-		res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+		/*res.header("Access-Control-Allow-Origin", "*");
+		res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");*/
 
 		console.log('DB ENTRY: ', TruckLocation.find().limit(1).sort({$natural:-1}));
 		console.log('REQUESTED TRUCK LOCATION');
