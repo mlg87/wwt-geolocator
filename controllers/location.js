@@ -28,7 +28,7 @@ var locationController = {
 			console.log('MOST RECENT LOCATION FIRST WAY: ', location);
 		});
 
-		TruckLocation.findOne({}, {sort: {field: 'asc', _id: -1}}, function(err, location) {
+		TruckLocation.findOne({}, {}, {sort: {field: 'asc', _id: -1}}, function(err, location) {
 			if(err) console.err('ERR FIND MOST RECENT TRUCK LOCATION');
 			console.log('MOST RECENT LOCATION SECOND WAY: ', location);
 		});
