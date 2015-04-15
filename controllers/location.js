@@ -24,8 +24,17 @@ var locationController = {
 		/*res.header("Access-Control-Allow-Origin", "*");
 		res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");*/
 
-		console.log('DB ENTRY: ', TruckLocation.find().limit(1).sort({$natural:-1}));
+		TruckLocation.findOne({}, {}, { sort: { 'created_at' : -1 } }, function(err, location) {
+			console.log('MOST RECENT LOCATION: ', location);
+		});
+
+		// console.log('DB ENTRY: ', TruckLocation.find().limit(1).sort({$natural:-1}));
 		console.log('REQUESTED TRUCK LOCATION');
+
+
+		// findOne({}, {}, { sort: { 'created_at' : -1 } }, function(err, post) {
+		//   console.log( post );
+		// });
 
 	}
 };
