@@ -24,7 +24,7 @@ var locationController = {
 		/*res.header("Access-Control-Allow-Origin", "*");
 		res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");*/
 
-		TruckLocation.findOne({}, {}, { sort: { 'created_at' : -1 } }, function(err, location) {
+		TruckLocation.findOne({}, {}, { sort: { 'created_at' : 1 } }, function(err, location) {
 			console.log('MOST RECENT LOCATION: ', location);
 		});
 
