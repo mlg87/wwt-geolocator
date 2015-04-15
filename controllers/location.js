@@ -20,20 +20,14 @@ var locationController = {
 		});
 	},
 	reportLocation: function(req, res, next) {
-		// res.header("Access-Control-Allow-Origin", "*");
-		/*res.header("Access-Control-Allow-Origin", "*");
-		res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");*/
-
-		TruckLocation.findOne({}, {}, { sort: { 'created_at' : 1 } }, function(err, location) {
-			console.log('MOST RECENT LOCATION FIRST WAY: ', location);
-		});
 
 		TruckLocation.findOne({}, {}, {sort: {field: 'asc', _id: -1}}, function(err, location) {
 			if(err) console.err('ERR FIND MOST RECENT TRUCK LOCATION');
-			console.log('MOST RECENT LOCATION SECOND WAY: ', location);
+			console.log('MOST RECENT LOCATION: ', location);
+			res.send(location);
 		});
 
-		// console.log('DB ENTRY: ', TruckLocation.find().limit(1).sort({$natural:-1}));
+		
 		console.log('REQUESTED TRUCK LOCATION');
 
 
