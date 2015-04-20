@@ -24,18 +24,14 @@ var locationController = {
 		TruckLocation.findOne({}, {}, {sort: {field: 'asc', _id: -1}}, function(err, location) {
 			if(err) console.err('ERR FIND MOST RECENT TRUCK LOCATION');
 			console.log('MOST RECENT LOCATION: ', location);
-			res.send(location);
+			res.send({
+				latitude: location.latitude,
+				longitude: location.longitude
+			});
 		});
 
 		
 		console.log('REQUESTED TRUCK LOCATION');
-
-
-		// findOne({}, {}, { sort: { 'created_at' : -1 } }, function(err, post) {
-		//   console.log( post );
-		// });
-		
-		// model.findOne().sort({ field: 'asc', _id: -1 }).limit(1)
 
 	}
 };
