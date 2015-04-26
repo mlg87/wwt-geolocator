@@ -10,11 +10,15 @@ block content
 		.row
 			.col-md-offset-2.col-sm-offset-2.col-md-8.col-sm-8.middle
 				button#geo-setter.btn SET CURRENT LOCATION
-	#success-notification.modal-fade(tabindex='-1' role='dialog')
+	#success-notification.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel', aria-hidden='true')
 		.modal-dialog
 			.modal-content
+				.modal-header
+					button.close(type='button', data-dismiss='modal', aria-label='Close')
+						span(aria-hidden='true') &times;                   
+					h4.modal-title Success!
 				.modal-body
-					p Your location has been successfully recorded! Now go slang some sammies!
+					h4 Your location has been successfully recorded! Now go slang some sammies!
 
 block body-scripts
 	script(src='/scripts/landing.js')

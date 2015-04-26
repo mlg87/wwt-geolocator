@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(function() {
 
 	$('#geo-setter').click(function() {
 		console.log('the btn was clicked');
