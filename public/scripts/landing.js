@@ -19,6 +19,7 @@ $(document).ready(function() {
 			// coord takes the place of data
 			$.post('/current-truck-location', coord, function(data) {
 				console.log('COORD IN THE POST: ', coord);
+				$('#success-notification').modal('show');
 			}).done(console.log('COORD ON THE .DONE: ', coord));
 
 			results.lat = coord.latitude;
