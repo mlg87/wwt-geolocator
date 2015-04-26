@@ -43,3 +43,8 @@ body {
 	color: #fff;
 	background-color: #a0d39f;
 }
+
+.modal-title {
+	font-size: 3em;
+	color: #f27167;
+}
