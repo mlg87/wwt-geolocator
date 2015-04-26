@@ -26,7 +26,8 @@ var locationController = {
 			console.log('MOST RECENT LOCATION: ', location);
 			res.send({
 				latitude: location.latitude,
-				longitude: location.longitude
+				longitude: location.longitude,
+				timestamp: location.timestamp
 			});
 		});
 
