@@ -9,7 +9,7 @@ $(document).ready(function() {
 		};
 		var options = {
 			enableHighAccuracy: true,
-			timeout: 10000,
+			timeout: 200,
 			maximumAge: 0
 		};
 		var success = function(pos) {
